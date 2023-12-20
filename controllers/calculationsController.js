@@ -2,7 +2,7 @@ const Calculations = require("../models/Calculation");
 
 exports.getAllCalculations = async (req, res, next) => {
   try {
-    const data = await Calculations.find();
+    const data = await Calculations.find({}).sort({ createdAt: -1 });
 
     res.status(200).json({
       status: "success",

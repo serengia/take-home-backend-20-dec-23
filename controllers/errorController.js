@@ -5,7 +5,7 @@ module.exports = (err, req, res, next) => {
   if (process.env.NODE_ENV === "DEVELOPMENT") {
     // DEVELOPMENT ERROR - HANDLER
     // console.log("TESTING 🧯🧯🧯", err.name);
-    res.status(err.statusCode).json({
+    return res.status(err.statusCode).json({
       status: err.status,
       message: err.message,
       stack: err.stack,
@@ -13,7 +13,7 @@ module.exports = (err, req, res, next) => {
     });
   } else if (process.env.NODE_ENV === "PRODUCTION") {
     // PRODUCTION ERROR HANDLER
-    res.status(err.statusCode).json({
+    return res.status(err.statusCode).json({
       status: err.status,
       message: err.message,
     });

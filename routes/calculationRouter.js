@@ -8,3 +8,5 @@ router
   .get(calculationsController.getAllCalculations)
   .post(calculationsController.postCalculation)
   .delete(calculationsController.deleteCalculation);
+
+module.exports = router;

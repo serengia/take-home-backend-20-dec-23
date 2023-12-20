@@ -19,7 +19,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://sere-calc.vercel.app/"],
+    origin: ["http://localhost:3000", "https://sere-calc.vercel.app"],
     credentials: true,
     // allowedHeaders: "Content-Type,Authorization,x-csrf-token",
     // exposedHeaders: ["*", "Authorization"],

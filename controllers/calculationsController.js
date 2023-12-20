@@ -29,7 +29,7 @@ exports.postCalculation = async (req, res, next) => {
 
 exports.deleteCalculation = async (req, res, next) => {
   try {
-    await Calculations.findByIdAndDelete(req.body.id);
+    await Calculations.findByIdAndDelete(req.params.id);
     res.status(200).json({
       status: "success",
       message: "Resource deleted",

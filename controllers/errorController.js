@@ -4,7 +4,6 @@ module.exports = (err, req, res, next) => {
 
   if (process.env.NODE_ENV === "DEVELOPMENT") {
     // DEVELOPMENT ERROR - HANDLER
-    // console.log("TESTING 🧯🧯🧯", err.name);
     return res.status(err.statusCode).json({
       status: err.status,
       message: err.message,

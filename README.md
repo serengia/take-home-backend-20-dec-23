@@ -22,6 +22,14 @@ To get a local copy up, CD into the root folder and run:
 npm install
 ```
 
+Run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
 ## Live Demo
 
 - [Live Demo Link](https://sere-calc.vercel.app/)
